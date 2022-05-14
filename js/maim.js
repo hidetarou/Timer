@@ -6,8 +6,8 @@
  let elapsedTime;
  let startID;
  let stopID;
- const music = new Audio("sound/カーソル移動7.mp3");
- const sound = new Audio("sound/キャンセル3.mp3");
+ const music = new Audio("sound/Start-Stop.mp3");
+ const sound = new Audio("sound/Reset.mp3");
  const time = document.getElementById('time');
  const start = document.getElementById('start');
  const stop = document.getElementById('stop');

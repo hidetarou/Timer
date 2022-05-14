@@ -6,6 +6,8 @@
  let elapsedTime;
  let startID;
  let stopID;
+ const music = new Audio("sound/カーソル移動7.mp3");
+ const sound = new Audio("sound/キャンセル3.mp3");
  const time = document.getElementById('time');
  const start = document.getElementById('start');
  const stop = document.getElementById('stop');
@@ -35,17 +37,18 @@
    if (startID){
      return;
    }
+   music.play();
    startID = true;
    stopID = false;
   startTime = Date.now();
   timerStart();
-
  });
 
  stop.addEventListener('click', () => {
    if (stopID) {
      return;
    }
+   music.play();
    startID = false;
    stopID = true;
   clearTimeout(timerID);
@@ -53,6 +56,7 @@
  });
 
  reset.addEventListener('click', () => {
+  sound.play();
   clearTimeout(timerID);
   startID = false;
   startTime   = 0;
